@@ -99,7 +99,7 @@ body {
   }
 
   &:checked {
-    background-color: #5087f8;
+    background-color: #2469f6;
     border: none;
   }
 
@@ -109,7 +109,7 @@ body {
   }
 
   &:checked:hover {
-    background-color: #2469f6;
+    background-color: #5087f8;
   }
 
   &:checked:active ~ .checkbox__overlay--active {
@@ -170,7 +170,7 @@ body {
   }
 
   &:hover .checkbox:checked {
-    background-color: #2469f6;
+    background-color: #5087f8;
   }
 
   &:active .checkbox__overlay--active {
