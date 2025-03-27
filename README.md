@@ -9,6 +9,6 @@
 
 ## Author
 
-| Name           |     |
-| -------------- | --- |
-| Jason Kanggara |     |
+| Name           |
+| -------------- |
+| Jason Kanggara |
