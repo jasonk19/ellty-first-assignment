@@ -178,3 +178,11 @@ body {
     display: block;
   }
 }
+
+.pages__container {
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

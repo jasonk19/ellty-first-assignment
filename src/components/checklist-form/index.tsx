@@ -2,7 +2,8 @@ import Button from "../button";
 import Home from "../home";
 
 const ChecklistForm = () => {
-  console.log();
+  const pages = Array.from({ length: 6 }).map((_, i) => i + 1);
+
   return (
     <div className="checklist-form">
       <Home label="All pages" />
@@ -12,10 +13,11 @@ const ChecklistForm = () => {
           border: "0.7px solid #eeeeee",
         }}
       />
-      <Home label="Page 1" />
-      <Home label="Page 2" />
-      <Home label="Page 3" />
-      <Home label="Page 4" />
+      <div className="pages__container">
+        {pages.map((page) => (
+          <Home label={`Page ${page}`} key={page} />
+        ))}
+      </div>
       <hr
         style={{
           width: "340px",
