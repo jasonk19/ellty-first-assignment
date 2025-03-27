@@ -1,11 +1,10 @@
 import Button from "../button";
 import Home from "../home";
-import styles from "./styles.module.css";
 
 const ChecklistForm = () => {
   console.log();
   return (
-    <div className={styles.container}>
+    <div className="checklist-form">
       <Home label="All pages" />
       <hr
         style={{
