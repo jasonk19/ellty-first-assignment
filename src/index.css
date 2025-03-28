@@ -16,6 +16,7 @@ body {
   font-size: 14px;
   background-color: #ffce22;
   cursor: pointer;
+  color: #1f2128;
 
   &:hover {
     background-color: #ffd84d;
@@ -167,6 +168,10 @@ body {
   justify-content: space-between;
 
   cursor: pointer;
+
+  p {
+    color: #1f2128;
+  }
 
   &:hover .checkbox {
     border-color: #bdbdbd;
