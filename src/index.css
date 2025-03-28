@@ -63,6 +63,10 @@ body {
   pointer-events: none;
 }
 
+.checkmark > path {
+  stroke: #e3e3e3;
+}
+
 .checkbox {
   /* reset checkbox default styles */
   appearance: none;
@@ -81,8 +85,12 @@ body {
     border-color: #bdbdbd;
   }
 
-  &:hover + .checkmark {
+  &:hover ~ .checkmark {
     display: block;
+  }
+
+  &:hover ~ .checkmark > path {
+    stroke: #e3e3e3;
   }
 
   &:active {
@@ -95,7 +103,10 @@ body {
 
   &:active ~ .checkmark {
     display: block;
-    color: #878787;
+  }
+
+  &:active ~ .checkmark > path {
+    stroke: #878787;
   }
 
   &:checked {
@@ -105,15 +116,26 @@ body {
 
   &:checked ~ .checkmark {
     display: block;
-    color: #ffffff;
+  }
+
+  &:checked ~ .checkmark > path {
+    stroke: #ffffff;
   }
 
   &:checked:hover {
     background-color: #5087f8;
   }
 
+  &:checked:hover ~ .checkmark path {
+    stroke: #ffffff;
+  }
+
   &:checked:active ~ .checkbox__overlay--active {
     display: block;
+  }
+
+  &:checked:active ~ .checkmark path {
+    stroke: #ffffff;
   }
 }
 
@@ -129,21 +151,6 @@ body {
   opacity: 10%;
   display: none;
   z-index: -1;
-}
-
-.checkbox__static {
-  /* reset checkbox default styles */
-  appearance: none;
-
-  /* custom checkbox styles */
-  width: 25px;
-  height: 25px;
-  box-sizing: border-box;
-  background-color: #ffffff;
-  border: 1px solid #cdcdcd;
-  border-radius: 6px;
-  cursor: pointer;
-  position: relative;
 }
 
 .home {
@@ -169,12 +176,24 @@ body {
     display: block;
   }
 
+  &:hover .checkmark > path {
+    stroke: #e3e3e3;
+  }
+
   &:hover .checkbox:checked {
     background-color: #5087f8;
   }
 
+  &:hover .checkbox:checked ~ .checkmark path {
+    stroke: #ffffff;
+  }
+
   &:active .checkbox__overlay--active {
     display: block;
+  }
+
+  &:active .checkmark ~ path {
+    stroke: #878787;
   }
 }
 
